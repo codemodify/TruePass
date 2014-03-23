@@ -1,0 +1,87 @@
+﻿<Window x:Class="TruePass.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="True Pass -=[ Digger ]=-" 
+        Height="628" 
+        Width="408" 
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow" 
+        Closing="Window_Closing" Closed="Window_Closed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="40" />
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" 
+                Grid.Column="0" 
+                Name="CopyButton" 
+                Click="CopyButton_Click" Style="{StaticResource NavigationButton}">
+            <Image Source="password-copy.png" Stretch="Fill" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Button>
+
+        <Button Grid.Row="0" 
+                Grid.Column="2" 
+                Name="EeditButton" 
+                Click="EeditButton_Click" Style="{StaticResource NavigationButton}">
+            <Image Source="password-edit.png" Stretch="Fill" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Button>
+
+        <Button Grid.Row="0" 
+                Grid.Column="4" 
+                Name="AddButton" 
+                Click="AddButton_Click" Style="{StaticResource NavigationButton}">
+            <Image Source="password-add.png" Stretch="Fill" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Button>
+
+
+
+        <Button Grid.Row="0" 
+                Grid.Column="6" 
+                Name="FeedbackButton" 
+                Click="FeedbackButton_Click" Style="{StaticResource NavigationButton}">
+            <Image Source="password-feedback.png" Stretch="Fill" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Button>
+
+        <Button Grid.Row="0" 
+                Grid.Column="8" 
+                Name="ContinueButton" 
+                Click="ContinueButton_Click" Style="{StaticResource NavigationButton}">
+            <Image Source="password-continue.png" Stretch="Fill" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Button>
+
+        <Button Grid.Row="0" 
+                Grid.Column="8" 
+                Name="PauseButton" 
+                Click="PauseButton_Click" Style="{StaticResource NavigationButton}">
+            <Image Source="password-pause.png" Stretch="Fill" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Button>
+
+
+
+        <TextBox Grid.Row="1"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="9"
+                 Name="GeneratedPassword"
+                 FontFamily="Consolas"
+                 FontSize="10" 
+                 HorizontalScrollBarVisibility="Auto" 
+                 IsReadOnly="True"
+                 IsReadOnlyCaretVisible="True" 
+                 TextWrapping="Wrap" 
+                 VerticalScrollBarVisibility="Auto" 
+                 MouseMove="GeneratedPassword_MouseMove" />
+
+    </Grid>
+</Window>
